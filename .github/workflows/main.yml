@@ -27,7 +27,7 @@ jobs:
       uses: atomoil/publish-jazzy-docs@master
       with:
         args: "--source-directory TestPublishJazzyDocs"
-        platform: google_cloud
+        platform: googlecloud
         destination_folder: master
         google_cloud_email: ${{secrets.GOOGLE_CLOUD_EMAIL}}
         google_cloud_key: ${{secrets.GOOGLE_CLOUD_KEY}}
