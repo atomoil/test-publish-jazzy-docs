@@ -22,14 +22,11 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    # Runs a single command using the runners shell
-    - name: Move to correct folder
-      run: cd TestPublishJazzyDocs
-
     # Runs a set of commands using the runners shell
     - name: Test publish-jazzy-docs
       uses: atomoil/publish-jazzy-docs@master
       with:
+        args: "--source-directory TestPublishJazzyDocs"
         platform: google_cloud
         destination_folder: master
         google_cloud_email: ${{secrets.GOOGLE_CLOUD_EMAIL}}
