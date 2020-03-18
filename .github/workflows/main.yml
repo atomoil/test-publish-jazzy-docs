@@ -31,3 +31,4 @@ jobs:
         destination_folder: master
         google_cloud_email: ${{secrets.GOOGLE_CLOUD_EMAIL}}
         google_cloud_key: ${{secrets.GOOGLE_CLOUD_KEY}}
+        google_cloud_project_id: grp-dev-clix-prj-clienteling
