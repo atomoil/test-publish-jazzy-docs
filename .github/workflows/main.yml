@@ -27,9 +27,10 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Test publish-jazzy-docs
-      uses: atomoil/publish-jazzy-docs@master
+      uses: atomoil/publish-jazzy-docs@feature/add-google-cloud
       with:
         args: "--source-directory TestPublishJazzyDocs"
-        platform: googlecloud
+        platform: google_cloud
+        bucket_name: maisonkit-docs.lvmhda.com
         destination_folder: master
         google_cloud_credentials: ${{ secrets.GOOGLE_CLOUD_CREDENTIALS }}
